@@ -1,83 +1,80 @@
 ﻿# Real-State-Price-Prediction
 
-Overview
-This project predicts real estate prices based on user inputs such as location, square footage, number of bedrooms (BHK), and bathrooms. It uses a machine learning model trained on Bengaluru house price data and provides an interactive web interface using Streamlit.
 
-Features
-Predicts home prices for various locations
+A web application that predicts house prices in different locations across Bangalore using machine learning.
 
-Interactive UI for inputting property details
+## Table of Contents
+- [Overview](#overview)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Model Details](#model-details)
+- [Dataset](#dataset)
+- [Screenshots](#screenshots)
+- [Future Improvements](#future-improvements)
+- [License](#license)
 
-Model trained and saved as a pickle file
+## Overview
+This project aims to help users estimate real estate prices in Bangalore based on location and other property features. It leverages machine learning for accurate price prediction and provides a user-friendly web interface for easy interaction.
 
-Easy deployment and sharing via GitHub and Streamlit Cloud
+## Features
+- Predicts house prices for various locations in Bangalore.
+- Interactive web application for inputting property details.
+- Visualization of price trends using plots.
+- Smooth and responsive UI.
 
-Tech Stack
-Python (core language)
+## Tech Stack
+- **Programming Languages:** Python, HTML, CSS, JavaScript, JSON  
+- **Frameworks & Libraries:** Flask, Jupyter Notebook, Matplotlib, scikit-learn  
+- **Other Tools:** Web browser interface for app
 
-Streamlit (web app framework)
+## Installation
+1. Clone the repository:  
+   ```bash
+   git clone <your-repo-link>
+Navigate to the project folder:
 
-scikit-learn (machine learning)
+bash
+Copy code
+cd Real-Estate-Price-Prediction
+Create a virtual environment (optional but recommended):
 
-pandas, numpy (data processing)
-
-Getting Started
-Prerequisites
-Python 3.7+
-
-pip (Python package manager)
-
-Installation
-Clone the repository:
-
-text
-git clone https://github.com/yourusername/real-estate-price-prediction.git
-cd real-estate-price-prediction
+bash
+Copy code
+python -m venv venv
+source venv/bin/activate   # For Linux/Mac
+venv\Scripts\activate      # For Windows
 Install dependencies:
 
-text
+bash
+Copy code
 pip install -r requirements.txt
-Run the Streamlit app:
-
-text
-streamlit run app.py
-Files
-app.py: Main Streamlit application
-
-model.pkl: Trained machine learning model
-
-columns.json: Feature columns for preprocessing
-
-requirements.txt: List of required Python packages
-
 Usage
-Open the app in your browser (Streamlit will provide a local URL)
+Start the Flask server:
 
-Enter property details: location, square footage, BHK, bathrooms
+bash
+Copy code
+python server.py
+Open your web browser and go to:
 
-Click "Estimate Price" to get the predicted value
+cpp
+Copy code
+http://127.0.0.1:5000
+Enter property details (location, square footage, number of bedrooms, etc.) and click Predict to get the estimated price.
 
 Model Details
-Trained on Bengaluru house price dataset
+Preprocessed and cleaned the dataset.
 
-Uses Linear Regression for prediction
+Performed feature engineering to improve prediction accuracy.
 
-Preprocessing includes handling categorical variables and scaling features
+Used machine learning algorithms from scikit-learn.
 
-Deployment
-Deploy on Streamlit Community Cloud or other cloud platforms
+Evaluated model performance with metrics like RMSE and R² score.
 
-Share the app link or embed in your website
+Dataset
+Dataset includes property details and prices from various Bangalore locations.
 
-Contributing
-Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
+Features include location, size, number of bedrooms, and other relevant attributes.
 
-License
-This project is licensed under the MIT License.
-
-Acknowledgements
-Kaggle Bengaluru house price dataset
-
-Streamlit documentation
-
-scikit-learn documentation
+Data preprocessing and cleaning were performed before training.
