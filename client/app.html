@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banglore Home Price Prediction</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>Banglore Home Price Predictor</h1>
+      <form>
+        <label for="uiSqft">Area (Square Feet)</label>
+        <input type="text" id="uiSqft" placeholder="e.g. 1000">
+
+        <label>BHK</label>
+        <div class="switch-field" id="uiBHKGroup">
+          <input type="radio" id="bhk1" name="uiBHK" value="1"><label for="bhk1">1</label>
+          <input type="radio" id="bhk2" name="uiBHK" value="2" checked><label for="bhk2">2</label>
+          <input type="radio" id="bhk3" name="uiBHK" value="3"><label for="bhk3">3</label>
+          <input type="radio" id="bhk4" name="uiBHK" value="4"><label for="bhk4">4</label>
+          <input type="radio" id="bhk5" name="uiBHK" value="5"><label for="bhk5">5</label>
+        </div>
+
+        <label>Bath</label>
+        <div class="switch-field" id="uiBathGroup">
+          <input type="radio" id="bath1" name="uiBathrooms" value="1"><label for="bath1">1</label>
+          <input type="radio" id="bath2" name="uiBathrooms" value="2" checked><label for="bath2">2</label>
+          <input type="radio" id="bath3" name="uiBathrooms" value="3"><label for="bath3">3</label>
+          <input type="radio" id="bath4" name="uiBathrooms" value="4"><label for="bath4">4</label>
+          <input type="radio" id="bath5" name="uiBathrooms" value="5"><label for="bath5">5</label>
+        </div>
+
+        <label for="uiLocations">Location</label>
+        <select id="uiLocations">
+          <option disabled selected>Choose a location</option>
+        </select>
+
+        <button type="button" onclick="onClickedEstimatePrice()">Estimate Price</button>
+        <div id="uiEstimatedPrice" class="result"></div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
