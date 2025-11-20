@@ -14,9 +14,10 @@ function getBHKValue() {
   return -1;
 }
 
-/* ✅ CORRECT API FOR PREDICTION */
+/* ✅ PRICE PREDICTION */
 function onClickedEstimatePrice() {
   console.log("Estimate price button clicked");
+
   var sqft = document.getElementById("uiSqft").value;
   var bhk = getBHKValue();
   var bathrooms = getBathValue();
@@ -36,17 +37,21 @@ function onClickedEstimatePrice() {
   });
 }
 
-/* ✅ CORRECT API FOR LOCATIONS */
+/* ✅ LOAD LOCATIONS DROPDOWN */
 function onPageLoad() {
   console.log("Document loaded");
+
   var url = "https://real-state-price-prediction-4.onrender.com/get_location_names";
 
   $.get(url, function(data, status) {
     console.log("Got location names response");
-    if (data) {
+
+    if (data && data.locations) {
       var locations = data.locations;
       var uiLocations = document.getElementById("uiLocations");
+
       $('#uiLocations').empty();
+
       for (var i in locations) {
         var opt = new Option(locations[i]);
         $('#uiLocations').append(opt);
