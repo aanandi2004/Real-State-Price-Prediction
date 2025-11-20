@@ -14,6 +14,7 @@ function getBHKValue() {
   return -1;
 }
 
+/* ✅ CORRECT API FOR PREDICTION */
 function onClickedEstimatePrice() {
   console.log("Estimate price button clicked");
   var sqft = document.getElementById("uiSqft").value;
@@ -22,7 +23,7 @@ function onClickedEstimatePrice() {
   var location = document.getElementById("uiLocations").value;
   var estPrice = document.getElementById("uiEstimatedPrice");
 
-  var url = "https://real-state-price-prediction-4.onrender.com/get_location_names";
+  var url = "https://real-state-price-prediction-4.onrender.com/predict_home_price";
 
   $.post(url, {
     total_sqft: parseFloat(sqft),
@@ -35,9 +36,10 @@ function onClickedEstimatePrice() {
   });
 }
 
+/* ✅ CORRECT API FOR LOCATIONS */
 function onPageLoad() {
   console.log("Document loaded");
-  var url = "https://real-state-price-prediction-4.onrender.com/predict_home_price";
+  var url = "https://real-state-price-prediction-4.onrender.com/get_location_names";
 
   $.get(url, function(data, status) {
     console.log("Got location names response");
