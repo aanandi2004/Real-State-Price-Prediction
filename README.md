@@ -4,7 +4,7 @@ A web application that predicts house prices in different locations across Banga
 
 ## 🌐 Live Demo
 
-👉 [https://real-state-price-prediction-qpimepv5s-aanandis-projects.vercel.app/](https://real-state-price-prediction-qpimepv5s-aanandis-projects.vercel.app/)
+👉 [(https://real-state-price-prediction-qpimepv5s-aanandis-projects.vercel.app/)](https://real-state-price-prediction-n2mw72ht3-aanandis-projects.vercel.app/)
 
 ## Table of Contents
 
@@ -114,3 +114,4 @@ Enter property details (location, square footage, number of bedrooms, etc.) and 
 ## License
 
 This project is open-source and available under the MIT License.
+
